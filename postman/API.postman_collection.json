@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "c3940457-0176-49ce-9739-3f90ff492ff5",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "10787973"
+	},
+	"item": [
+		{
+			"name": "Player Stats (Faceit)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "5|Crtu8cPq6zZcE8vV6Tgf85llrKFd7ZOzqwt1bFpde9bb8050"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/faceit/player/stats?nickname={changeThisToYourNickname}",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"faceit",
+						"player",
+						"stats"
+					],
+					"query": [
+						{
+							"key": "nickname",
+							"value": "{changeThisToYourNickname}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test@example.com\",\n    \"password\": \"Plainpassword\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8000/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "2|PzI4o5UbSyyiMDkEEmZ6h8o73YTlBdijmBQBLK5E30c1960f"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "localhost:8000/api/logout"
+			},
+			"response": []
+		}
+	]
+}
